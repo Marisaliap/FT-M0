@@ -233,8 +233,6 @@ function esVocal(letra){
   } else "Dato incorrecto";
 }
 
-
-
 // No modificar nada debajo de esta línea
 // --------------------------------
 
