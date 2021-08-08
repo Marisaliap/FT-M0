@@ -18,11 +18,11 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if (edad >= 18) {
-    return "Allowed";
-  } else {
-    return "Not allowed";
-  }
+if (edad >= 18) {
+  return "Allowed";
+} else {
+  return "Not allowed";
+}
 }
   
 function conection(status) {
@@ -53,21 +53,10 @@ function saludo(idioma) {
     return "Ni" + " " + "Hao" + "!";
   } else if (idioma === "ingles") {
     return "Hello" + "!";
-  } else {return "Hola" + "!";
+  } else { return "Hola" + "!";
   }
-}
+  }
 
-/*
-Para implementar la siguiente función vamos a utilizar una estructura de control de flujo nueva, 
-llamada switch, si no estás familiarizado con esta estructura, es un buen escenario para hacerle 
-una visita al mejor amigo del programador, INTERNET! 
-En la carrera del desarrollador constantemente es necesario recurrir a los recursos que nos 
-proporciona la web (Google, YouTube, MDN, Stack Overflow, y muchos más) en búsqueda de las 
-herramientas necesarias para resolver los distintos problemas que nos enfrentamos, por lo que 
-aprender a realizar estas búsquedas en internet es uno de los skill más importantes que puedes 
-adquirir!
-En tu buscador basta con simplemente escribir "switch Javascript" y listo. Éxitos!
-*/
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
@@ -100,14 +89,15 @@ function esDiezOCinco(numero) {
     return false;
 }
 }
-
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero > 20 && numero < 50) {
     return true;
-  } return false;
+  } else { 
+    return false
+  }
 }
 
 function esEntero(numero) {
@@ -167,50 +157,33 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  /* if (numero === 0 || numero === 1) {
+  if (numero === 0 || numero === 1) {
     return false;
   } 
-  for (let i = numero; i >= 1; i--) {
+  for (var i = 2; i < numero; i++) {
     if (numero % i === 0) {
-    if (i != 1 && i != numero) {
       return false;
     } 
-  }
-} 
-return true;
-} */
-if (numero === 0 || numero === 1) {
-  return false;
-} 
-for (var i = 2; i < numero; i++) {
-  if (numero % i === 0) {
-    return false;
   } 
-} 
-return true;
-}
+  return true;
+  }
+  
 
 function esVerdadero(valor){
-  /* //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
+  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
-  //Escribe tu código aquí */ 
-
+  //Escribe tu código aquí
 if (valor === true) {
   return "Soy verdadero";
 } else {
   return "Soy falso";
+} 
 }
- 
+
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
- /*  if (numero > 99 && numero < 1000) {
-    return true;
-  } else {
-    return false;
-  }
-} */
-var str = numero + ""
+  var str = numero + ""
 if (str.length === 3) {
   return true;
 } return false;
