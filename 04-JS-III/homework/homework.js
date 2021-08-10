@@ -26,13 +26,19 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var aux = [];
+ /*  var aux = [];
   for (let i=0; i<array.length;i++) {
 aux.push(array[i]+1)
   }
   return aux;
-}
+} */
 
+for (let i=0; i<array.length;i++) {
+  array[i] = array[i] + 1
+    }
+    return array;
+  }
+  
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
@@ -175,7 +181,7 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  var respuesta;
+ /*  var respuesta;
   for (let i=0;i<arreglo.length - 1;i++) {
   if (arreglo[i] === arreglo[i + 1]) {
     respuesta = true;
@@ -183,6 +189,16 @@ function todosIguales(arreglo) {
     return respuesta = false;
   }
 } return respuesta;
+}
+ */
+var cont = 0;
+  for (let i=1;i<arreglo.length;i++) {
+  if (arreglo[i - 1] !== arreglo[i]) {
+    cont++;
+  } if (cont > 0) {
+    return false;
+  }
+} return true;
 }
 
 function mesesDelAño(array) {
@@ -226,23 +242,37 @@ function breakStatement(numero) {
   //Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y 
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
-  // Tu código:
-  var respuesta = [];
-
-  for (let i=0; i<10; i++) {
-    if (numero === i) {
-      break;
-    }
-    numero = numero + 2;
-    respuesta.push(numero)
-  } if (respuesta.length < 10) {
-    return "Se interrumpió la ejecución";
-  } else {
-    return respuesta;
+  // Tu códigoo:
+  var respuesta = [];    
+  for (let i=0; i<10; i++) {     
+    if (numero === i) {       
+      break;     
+    }     
+    numero = numero + 2;     
+    respuesta.push(numero)   
+  } if (respuesta.length < 10) 
+  {     
+    return "Se interrumpió la ejecución";   
+  } else {     
+    return respuesta;   
+  }   
+} 
+/* var respuesta = [];     
+  for (let i=0; i<10; i++) {      
+    numero = numero + 2;      
+    if (numero === i) {        
+      break;       
+    } 
+    else {         
+       respuesta.push(numero);        
+      }        
+      if (i < 10) {        
+        return "Se interrumpió la ejecución"        
+      }         
+      return respuesta       
+    } 
   }
-  } 
- 
-
+ */
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -291,4 +321,4 @@ module.exports = {
   mayorACien,
   breakStatement,
   continueStatement
-};
+}
