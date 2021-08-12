@@ -64,6 +64,7 @@ function filter(array) {
   }
   return nuevoArray;  */
 
+  
   var nuevoArray = array.filter (function(elemento) { 
     if (elemento[0] === "a") {
       return elemento;
